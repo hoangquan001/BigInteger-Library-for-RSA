@@ -515,21 +515,3 @@ string intToStringWithLeadingZeros(int num, int width = 2)
     oss << setw(width) << setfill('0') << num;
     return oss.str();
 }
-
-int main(int argc, char *argv[])
-{
-    if (argc != 3)
-    {
-        cerr << "Usage: " << argv[0] << "./main input_filename output_filename" << endl;
-        return 1;
-    }
-    /* for test */
-    // for (int i = 0; i <= 19; i++)
-    // {
-    //     string name1 = "test_" + intToStringWithLeadingZeros(i) + ".inp";
-    //     string name2 = "test_" + intToStringWithLeadingZeros(i) + ".out";
-    //     runTestCase(name1, name2);
-    // }
-    runTestCase(argv[1], argv[2]);
-    return 1;
-}
